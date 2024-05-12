@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuário</title>
-</head>
-<body>
-    <h2>Registro de Usuário</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Registrar</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+  Registro de Usuário
+{% endblock %}
+
+{% block content %}
+
+  <h1>Registro de Usuário</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrar</button>
+  </form>
+
+{% endblock %}

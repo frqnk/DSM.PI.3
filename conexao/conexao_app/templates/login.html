@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    {% if erro %}
-        <p>Usuário ou senha incorretos.</p>
-    {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+
+  <h1>Login</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-light">Login</button>
+  </form>
+  {% if error %}<p>Usuário ou senha incorretos.</p>{% endif %}
+
+{% endblock %}
