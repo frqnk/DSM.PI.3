@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ConexaoAppConfig(AppConfig):
+class CoreAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'conexao_app'
+    name = 'core_app'

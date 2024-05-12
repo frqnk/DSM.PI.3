@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ block.super }} | Entrar
+{% endblock %}
+
+{% block content %}
+  <br>
+  <h1>Entrar</h1>
+  <br>
+  <div class="col-md-4">
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+  <br>
+  <p>Não tem uma conta? <a href="{% url 'signup' %}">Cadastre-se</a></p>
+{% endblock %}
