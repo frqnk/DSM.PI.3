@@ -8,16 +8,14 @@
   <br>
   <h1>Entrar</h1>
   <br>
-  <div class="col-md-4">
+  <div class="col-md-6 col-lg-4">
     <form action="{% url 'login' %}" method="post">
       {% csrf_token %}
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input class="form-control" type="email" name="email" placeholder="Endereço de email" required oninvalid="this.setCustomValidity('Campo obrigatório')">
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input class="form-control" type="password" name="password" placeholder="Senha" required oninvalid="this.setCustomValidity('Campo obrigatório')">
       </div>
       <button type="submit" class="btn btn-primary">Entrar</button>
     </form>

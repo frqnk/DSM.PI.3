@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  {{ block.super }} | Cadastro
+  {{ block.super }} | Cadastrar-se
+{% endblock %}
+
+{% block content %}
+  <br>
+  <h1>Cadastrar-se</h1>
+  <br>
+  <div class="col-md-6 col-lg-4">
+    <form action="{% url 'signup' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Cadastrar-se</button>
+    </form>
+  </div>
 {% endblock %}
