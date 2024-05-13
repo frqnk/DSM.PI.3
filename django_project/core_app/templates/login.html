@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ block.super }} | Entrar
+{% endblock %}
+
+{% block content %}
+  <br>
+  <h1>Entrar</h1>
+  <br>
+  <div class="col-md-6 col-lg-4">
+    <form action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <input class="form-control" type="email" name="email" placeholder="Endereço de email" required oninvalid="this.setCustomValidity('Campo obrigatório')">
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="password" name="password" placeholder="Senha" required oninvalid="this.setCustomValidity('Campo obrigatório')">
+      </div>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+  <br>
+  <p>Não tem uma conta? <a href="{% url 'signup' %}">Cadastre-se</a></p>
+{% endblock %}
