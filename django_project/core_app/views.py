@@ -4,8 +4,10 @@ from django.contrib.auth import authenticate as auth, login as auth_login, logou
 from django.contrib.auth.models import User
 from . import forms
 
-def home(request):
-    return render(request, 'home.html')
+
+def home_view(request):
+    return render(request, 'core_app/home.html')
+
 
 def login(request):
     if request.method == 'POST':
@@ -20,10 +22,12 @@ def login(request):
             messages.error(request, 'Endereço de email ou senha inválido.')
     return render(request, 'login.html')
 
+
 def logout(request):
     auth_logout(request)
     messages.success(request, 'Saída bem sucedida.')
     return redirect('home')
+
 
 def signup(request):
     if request.method == 'POST':
