@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão alimentar</title>
+    <link rel="icon" href="{% static 'img/logo.jpg' %}" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Link para a biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li>
+                    <a class="texto">Rastreie sua doação:</a>
+                </li>
+                <li class="nav-item">
+                    <form action="#" class="form-inline mr-2">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="ID de rastreio">
+                        </div>
+                        <button type="submit" class="btn btn-custom">Rastreio</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-lg">
+        <section id="main-section" class="main-content">
+            <div class="intro-content">
+                <h2 id="topo" class="center main-title">Bem vindo ao Conexão alimentar!</h2>
+                <div class="flex-container">
+                    <div class="text-content">
+                        <h4 class="left-align subtitle">Conectando corações generosos com mãos necessitadas, uma doação de cada vez.</h4>
+                        <h5 class="left-align description">Cada doação é um compromisso com a justiça social e a solidariedade. Junte-se a nós!</h5>
+                    </div>
+                    <img src="{% static 'img/encaminhamento.jpg' %}" alt="Imagem de introdução" class="intro-image">
+                </div>
+            </div>
+
+            <h3 class="main-title"> Como doar:</h3>
+            <div class="cards mb-4">
+                <div class="card">
+                    <img src="{% static 'img/encaminhamento.jpg' %}" alt="Imagem 1">
+                    <h3>1º Etapa</h3>
+                    <p>Você encaminha suas doações aos nossos pontos de coleta responsáveis, realizando também um cadastro em nosso site, podendo assim realizar um login posteriormente.</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/triagem.jpg' %}" alt="Imagem 2">
+                    <h3>2º Etapa</h3>
+                    <p>É realizada a triagem das doações, separando e catalogando todos os produtos para depois enviar para o destino selecionado.</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/transportadora.jpg' %}" alt="Imagem 3">
+                    <h3>3º Etapa</h3>
+                    <p>Após ser encaminhado para as transportadoras, um ID de rastreio será disponibilizado, facilitando assim o acesso.</p>
+                </div>
+            </div>
+
+            <h2 class="center main-title">Nosso Trabalho:</h2>
+            <div id="carouselExampleIndicators" class="carousel slide mb-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/Importancia.png' %}" class="d-block w-50 mx-auto" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/desperdicio.png' %}" class="d-block w-50 mx-auto" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/seguranca.png' %}" class="d-block w-50 mx-auto" alt="Imagem 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer" style="background-color: #705641; padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <!-- Informações da empresa -->
+                <div class="col-md-4">
+                    <a href="#topo" style="font-size: 18px;" class="link-branco">Sobre Nós</a>
+                    <p style="font-size: 14px;">Uma empresa que transforma sonhos em combustivel para mudança.</p>
+                </div>
+                <!-- Links Importantes -->
+                <div class="col-md-4">
+                    <h4 style="font-size: 18px;">Links Importantes</h4>
+                    <ul class="list-unstyled" style="font-size: 14px;">
+                        <li><a href="#" style="color: #F68B48;">Termos de Serviço</a></li>
+                        <li><a href="#" style="color: #F68B48;">Política de Privacidade</a></li>
+                        <li><a href="registro.html" style="color: #F68B48;">Rastreio</a></li>
+                    </ul>
+                </div>
+                <!-- Ícones de redes sociais -->
+                <div class="col-md-4">
+                    <h4 style="font-size: 18px;">Redes Sociais</h4>
+                    <ul class="list-inline social-icons" style="font-size: 140%;">
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

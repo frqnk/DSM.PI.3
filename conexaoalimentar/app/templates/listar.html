@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Doações</title>
+</head>
+<body>
+    <h1>Lista de Doações</h1>
+    <ul>
+        {% for doacao in doacoes %}
+            <li>
+                <strong>Nome:</strong> {{ doacao.nome }}<br>
+                <strong>Data:</strong> {{ doacao.data_doacao }}<br>
+                <strong>Documento:</strong> {{ doacao.documento }}<br>
+                <strong>Local de Destino:</strong> {{ doacao.local_destino }}<br>
+                <strong>Produtos:</strong>
+                <ul>
+                    {% for produto in doacao.produtos %}
+                        <li>{{ produto.nome }} - {{ produto.quantidade }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'editar_doacao' doacao.id %}">Editar</a>
+                <form action="{% url 'excluir_doacao' doacao.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Doação</title>
+</head>
+<body>
+    <h1>Editar Doação</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ doacao_form.as_p }}
+        {% for produto_form in produto_forms %}
+            {{ produto_form.as_p }}
+        {% endfor %}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

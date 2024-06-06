@@ -1,0 +1,266 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: #F68B48;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Ajuste conforme necessário */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#main-section {
+    padding: 50px 0;
+}
+
+#main-section .left-align {
+    text-align: left !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 150px; /* Define a largura fixa */
+    height: 150px; /* Define a altura fixa */
+    object-fit: cover; /* Garante que a imagem cubra toda a área do círculo */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin: 0 auto; /* Centraliza a imagem dentro do card */
+    display: block; /* Para garantir que a margem auto funcione */
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    justify-content: space-between; /* Distribui espaço entre itens */
+}
+
+.intro-image {
+    width: 200px; /* Ajuste conforme necessário */
+    height: 200px; /* Ajuste conforme necessário */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.main-title {
+    margin-bottom: 30px; /* Aumente este valor para aumentar o espaço abaixo do título principal */
+}
+
+.subtitle {
+    margin-top: 30px; /* Aumente este valor para aumentar o espaço acima do subtítulo */
+    margin-bottom: 20px; /* Aumente este valor para aumentar o espaço abaixo do subtítulo */
+}
+
+.description {
+    margin-top: 20px; /* Aumente este valor para aumentar o espaço acima da descrição */
+}
+
+.carousel-item img {
+    width: 100%; /* Mantém a largura da imagem em 100% */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 600px; /* Aumenta a altura máxima para as imagens do carrossel */
+    object-fit: cover; /* Garante que a imagem cubra a área disponível */
+}
+
+
+.footer {
+    background-color: #705641;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.footer-info div {
+    margin-right: 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    background-color: #ffffff;
+}
+
+.col-md-4 {
+    color: white;
+}
+
+.link-branco {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.btn-custom {
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff; /* Cor do texto */
+    background-color: #705641; /* Cor de fundo */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-custom:hover {
+    background-color: #3f3024; /* Cor de fundo ao passar o mouse */
+}
+
+.registration-form {
+    padding: 50px 0;
+}
+
+.registration-form form {
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    border-top: 10px solid #F68B48;
+}
+
+.registration-form .form-icon {
+    text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #F68B48;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media {
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #F68B48;
+    border-top: 1px solid #F68B48;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a {
+    font-size: 23px;
+    margin: 0 3px;
+    color: #F68B48;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form {
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-image {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Doação</title>
+</head>
+<body>
+    <h1>Registro de Doação</h1>
+    {% if doacao_form.errors %}
+        <p style="color: rgb(225, 139, 26);">Corrija os erros abaixo:</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Campos do formulário de doação -->
+        <div>
+            {{ doacao_form.nome.label_tag }}
+            {{ doacao_form.nome }}
+        </div>
+        <div>
+            {{ doacao_form.documento.label_tag }}
+            {{ doacao_form.documento }}
+        </div>
+
+        <!-- Campo de seleção para Local de Destino -->
+        <div>
+            {{ doacao_form.local_destino.label_tag }}
+            {{ doacao_form.local_destino }}
+        </div>
+
+        <!-- Campos para os produtos -->
+        <h3>Produtos</h3>
+        <div id="produtos-forms">
+            {% for produto_form in produto_forms %}
+                {{ produto_form.as_p }}
+            {% endfor %}
+        </div>
+        
+        <!-- Botão de submissão -->
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
