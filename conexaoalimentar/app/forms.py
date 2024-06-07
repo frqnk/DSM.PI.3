@@ -8,7 +8,12 @@ class ProdutoForm(forms.Form):
 
 
 class DoacaoForm(forms.ModelForm):
-    local_destino = forms.ChoiceField(choices=[('local1', 'Local 1'), ('local2', 'Local 2'), ('local3', 'Local 3')],
+    local_destino = forms.ChoiceField(choices=[('local1', 'Amparaí '),
+                                               ('local2', 'Amigos do Bem'),
+                                               ('local3', 'Banco de Alimentos - ABNE'),
+                                               ('local4',
+                                                'Cozinha - Tem Gente com Fome'),
+                                               ('local5', 'ActionAid')],
                                       required=False, label='Local de Destino', widget=forms.Select(attrs={'class': 'form-control'}))
 
     class Meta:
