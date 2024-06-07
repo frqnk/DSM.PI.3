@@ -1,30 +1,106 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Doações</title>
+    <link rel="icon" href="{% static 'img/logo.jpg' %}" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Lista de Doações</h1>
-    <ul>
-        {% for doacao in doacoes %}
-            <li>
-                <strong>Nome:</strong> {{ doacao.nome }}<br>
-                <strong>Data:</strong> {{ doacao.data_doacao }}<br>
-                <strong>Documento:</strong> {{ doacao.documento }}<br>
-                <strong>Local de Destino:</strong> {{ doacao.local_destino }}<br>
-                <strong>Produtos:</strong>
-                <ul>
-                    {% for produto in doacao.produtos %}
-                        <li>{{ produto.nome }} - {{ produto.quantidade }}</li>
+    <header>
+        <div class="logo">
+            <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <form action="#" class="form-inline mr-2"></form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-lg">
+        <section id="main-section" class="main-content d-flex justify-content-center">
+            <div class="intro-content w-75">
+                <h1 class="center main-title">Lista de Doações</h1>
+                <ul class="list-group">
+                    {% for doacao in doacoes %}
+                        <li class="list-group-item">
+                            <strong>Nome:</strong> {{ doacao.nome }}<br>
+                            <strong>Data:</strong> {{ doacao.data_doacao }}<br>
+                            <strong>Documento:</strong> {{ doacao.documento }}<br>
+                            <strong>Local de Destino:</strong> {{ doacao.local_destino }}<br>
+                            <strong>Produtos:</strong>
+                            <ul>
+                                {% for produto in doacao.produtos %}
+                                    <li>{{ produto.nome }} - {{ produto.quantidade }}</li>
+                                {% endfor %}
+                            </ul>
+                            <a href="{% url 'editar_doacao' doacao.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            <form action="{% url 'excluir_doacao' doacao.id %}" method="post" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                            </form>
+                        </li>
                     {% endfor %}
                 </ul>
-                <a href="{% url 'editar_doacao' doacao.id %}">Editar</a>
-                <form action="{% url 'excluir_doacao' doacao.id %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit">Excluir</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer" style="background-color: #705641; padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <!-- Informações da empresa -->
+                <div class="col-md-4">
+                    <a href="#topo" style="font-size: 18px;" class="link-branco">Sobre Nós</a>
+                    <p style="font-size: 14px;">Uma empresa que transforma sonhos em combustível para mudança.</p>
+                </div>
+                <!-- Links Importantes -->
+                <div class="col-md-4">
+                    <h4 style="font-size: 18px;">Links Importantes</h4>
+                    <ul class="list-unstyled" style="font-size: 14px;">
+                        <li><a href="#" style="color: #F68B48;">Termos de Serviço</a></li>
+                        <li><a href="#" style="color: #F68B48;">Política de Privacidade</a></li>
+                        <li><a href="registro.html" style="color: #F68B48;">Rastreio</a></li>
+                    </ul>
+                </div>
+                <!-- Ícones de redes sociais -->
+                <div class="col-md-4">
+                    <h4 style="font-size: 18px;">Redes Sociais</h4>
+                    <ul class="list-inline social-icons" style="font-size: 140%;">
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon" style="color: #F68B48;">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
