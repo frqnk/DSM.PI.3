@@ -17,13 +17,13 @@
 <body>
     <header>
         <div class="logo">
+            <a href="{% url 'home' %}">
             <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul class="nav">
-                <li>
-                    <a class="texto">Rastreie sua doação:</a>
-                </li>
+                
                 <li class="nav-item">
                     <form action="#" class="form-inline mr-2">
                         <div class="form-group">
@@ -31,6 +31,9 @@
                         </div>
                         <button type="submit" class="btn btn-custom">Rastreio</button>
                     </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-custom" href="registro">Registro</a>
                 </li>
             </ul>
         </nav>
@@ -104,7 +107,7 @@
                 <!-- Informações da empresa -->
                 <div class="col-md-4">
                     <a href="#topo" style="font-size: 18px;" class="link-branco">Sobre Nós</a>
-                    <p style="font-size: 14px;">Uma empresa que transforma sonhos em combustivel para mudança.</p>
+                    <p style="font-size: 14px;">Uma empresa que transforma sonhos em combustível para mudança.</p>
                 </div>
                 <!-- Links Importantes -->
                 <div class="col-md-4">

@@ -16,7 +16,9 @@
 <body>
     <header>
         <div class="logo">
+            <a href="{% url 'home' %}">
             <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul class="nav">
@@ -28,10 +30,12 @@
     </header>
 
     <div class="container-lg">
+        <div class="content-wrapper p-4 shadow">
         <section id="main-section" class="main-content d-flex justify-content-center">
             <div class="intro-content w-75">
                 <h1 class="center main-title">Lista de Doações</h1>
                 <ul class="list-group">
+                    <br>
                     {% for doacao in doacoes %}
                         <li class="list-group-item">
                             <strong>Nome:</strong> {{ doacao.nome }}<br>
@@ -43,6 +47,7 @@
                                 {% for produto in doacao.produtos %}
                                     <li>{{ produto.nome }} - {{ produto.quantidade }}</li>
                                 {% endfor %}
+                                <br>
                             </ul>
                             <a href="{% url 'editar_doacao' doacao.id %}" class="btn btn-primary btn-sm">Editar</a>
                             <form action="{% url 'excluir_doacao' doacao.id %}" method="post" style="display:inline;">
@@ -54,6 +59,7 @@
                 </ul>
             </div>
         </section>
+    </div>
     </div>
 
     <footer class="footer" style="background-color: #705641; padding: 20px 0;">

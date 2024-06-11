@@ -16,7 +16,9 @@
 <body>
     <header>
         <div class="logo">
+            <a href="{% url 'home' %}">
             <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul class="nav">
@@ -28,6 +30,7 @@
     </header>
 
     <div class="container-lg">
+        <div class="content-wrapper p-4 shadow">
         <section id="main-section" class="main-content d-flex justify-content-center">
             <div class="intro-content w-75">
                 <h1 class="center main-title">Editar Doação</h1>
@@ -68,6 +71,7 @@
                 </form>
             </div>
         </section>
+    </div>
     </div>
 
     <footer class="footer" style="background-color: #705641; padding: 20px 0;">

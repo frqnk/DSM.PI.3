@@ -88,7 +88,7 @@ nav ul li a {
 }
 
 .main-title {
-    margin-bottom: 30px; /* Aumente este valor para aumentar o espaço abaixo do título principal */
+    margin-bottom: 40px; 
 }
 
 .subtitle {
@@ -139,7 +139,36 @@ nav ul li a {
     text-decoration: none; /* Remove o sublinhado padrão */
 }
 
+/* Estilos para a área limitada */
+.content-wrapper {
+    background-color: #f8f9fa; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 10px; 
+    max-width: 800px;
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
 .btn-custom {
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff; /* Cor do texto */
+    background-color: #705641; /* Cor de fundo */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 10px; /* Adiciona um espaço entre os botões */ 
+}
+
+.btn-secondary mt-3 {
     display: inline-block;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -263,4 +292,28 @@ nav ul li a {
         margin-right: 0;
         margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
     }
+}
+
+/* Estilização para os campos do formulário */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border-radius: 10px; /* Ajuste o valor conforme necessário */
+    border: 1px solid #ccc; /* Cor da borda */
+    padding: 10px; /* Espaçamento interno */
+    width: auto; /* Ajusta a largura automaticamente */
+    max-width: 300px; /* Define a largura máxima dos campos */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none; /* Remove a borda padrão ao focar */
+    border-color: #F68B48; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(246, 139, 72, 0.5); /* Sombra ao focar */
 }
