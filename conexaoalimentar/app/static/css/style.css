@@ -88,7 +88,7 @@ nav ul li a {
 }
 
 .main-title {
-    margin-bottom: 40px; 
+    margin-bottom: 30px; /* Aumente este valor para aumentar o espaço abaixo do título principal */
 }
 
 .subtitle {
@@ -139,36 +139,7 @@ nav ul li a {
     text-decoration: none; /* Remove o sublinhado padrão */
 }
 
-/* Estilos para a área limitada */
-.content-wrapper {
-    background-color: #f8f9fa; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    padding: 10px; 
-    max-width: 800px;
-    width: 100%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
 .btn-custom {
-    display: inline-block;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff; /* Cor do texto */
-    background-color: #705641; /* Cor de fundo */
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-    margin-right: 10px; /* Adiciona um espaço entre os botões */ 
-}
-
-.btn-secondary mt-3 {
     display: inline-block;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -294,26 +265,59 @@ nav ul li a {
     }
 }
 
-/* Estilização para os campos do formulário */
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    border-radius: 10px; /* Ajuste o valor conforme necessário */
-    border: 1px solid #ccc; /* Cor da borda */
-    padding: 10px; /* Espaçamento interno */
-    width: auto; /* Ajusta a largura automaticamente */
-    max-width: 300px; /* Define a largura máxima dos campos */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+.custom-form .form-group {
+    margin-bottom: 20px;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    outline: none; /* Remove a borda padrão ao focar */
-    border-color: #F68B48; /* Cor da borda ao focar */
-    box-shadow: 0 0 5px rgba(246, 139, 72, 0.5); /* Sombra ao focar */
+.custom-form .form-group label {
+    font-weight: bold;
+}
+
+.custom-form .form-group input,
+.custom-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-form .form-group input:focus,
+.custom-form .form-group select:focus {
+    outline: none;
+    border-color: #F68B48;
+    box-shadow: 0 0 5px rgba(246, 139, 72, 0.5);
+}
+
+.custom-form .btn-custom {
+    background-color: #705641;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-form .btn-custom:hover {
+    background-color: #3f3024;
+}
+
+.custom-form .btn-secondary {
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.custom-form .intro-content {
+    width: 100%;
+}
+
+.custom-form .main-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.custom-form #produtos-forms .form-group {
+    margin-bottom: 20px;
 }

@@ -12,18 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Link para a biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Verifique o caminho do arquivo CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="{% url 'home' %}">
             <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
-            </a>
         </div>
         <nav>
             <ul class="nav">
-                
+                <li>
+                    <a class="texto">Rastreie sua doação:</a>
+                </li>
                 <li class="nav-item">
                     <form action="#" class="form-inline mr-2">
                         <div class="form-group">
@@ -33,7 +34,7 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-custom" href="registro">Registro</a>
+                    <a class="nav-link btn btn-custom" href="{% url 'registro' %}">Registro</a>
                 </li>
             </ul>
         </nav>
@@ -52,7 +53,7 @@
                 </div>
             </div>
 
-            <h3 class="main-title"> Como doar:</h3>
+            <h3 class="main-title">Como doar:</h3>
             <div class="cards mb-4">
                 <div class="card">
                     <img src="{% static 'img/encaminhamento.jpg' %}" alt="Imagem 1">
@@ -115,7 +116,7 @@
                     <ul class="list-unstyled" style="font-size: 14px;">
                         <li><a href="#" style="color: #F68B48;">Termos de Serviço</a></li>
                         <li><a href="#" style="color: #F68B48;">Política de Privacidade</a></li>
-                        <li><a href="registro.html" style="color: #F68B48;">Rastreio</a></li>
+                        <li><a href="registro de doaçao.html" style="color: #F68B48;">Rastreio</a></li>
                     </ul>
                 </div>
                 <!-- Ícones de redes sociais -->
@@ -143,9 +144,8 @@
         </div>
     </footer>
     
-    <!-- Scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
