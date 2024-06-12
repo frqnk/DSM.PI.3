@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Doação</title>
+    <title>Registre sua Doação</title>
     <link rel="icon" href="{% static 'img/logo.jpg' %}" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,9 @@
 <body>
     <header>
         <div class="logo">
+            <a href="{% url 'home' %}">
             <img src="{% static 'img/logo2.jpg' %}" alt="Logo">
+            </a>
         </div>
         <nav>
             <ul class="nav">
@@ -27,10 +29,11 @@
         </nav>
     </header>
 
-    <div class="container-lg">
-        <section id="main-section" class="main-content d-flex justify-content-center">
-            <div class="intro-content w-75">
-                <h1 id="topo" class="center main-title">Registro de Doação</h1>
+    <div class="container-lg d-flex justify-content-center custom-form">
+        <div class="content-wrapper p-4 shadow w-50">
+            <section id="main-section" class="main-content d-flex justify-content-center">
+                <div class="intro-content w-75">
+                    <h1 class="center main-title">Registre sua doação</h1>
                 {% if doacao_form.errors %}
                     <p style="color: rgb(225, 139, 26);">Corrija os erros abaixo:</p>
                 {% endif %}
@@ -64,9 +67,12 @@
 
                     <!-- Botão de submissão -->
                     <button type="submit" class="btn btn-custom">Registrar</button>
+                    <br>
+                    <a href="{% url 'listar' %}" class="btn btn-secondary mt-3">Ver Doações</a>
                 </form>
             </div>
         </section>
+    </div>
     </div>
 
     <footer class="footer" style="background-color: #705641; padding: 20px 0;">
