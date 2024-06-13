@@ -1,6 +1,6 @@
 Projeto Conexão Alimentar
 
-                                                      **Visão Geral**
+**Visão Geral**
 
 O sistema "Conexão Alimentar" foi criado pensando em um meio facilitador para o registro de doações alimentares. O projeto pode ser utilizado por um ponto de coleta já existente para controle das entradas ou pode se tornar um ponto de coleta próprio. As funções de login e rastreamento são dependentes dessas possíveis integrações e não foram implementadas de início.
 
