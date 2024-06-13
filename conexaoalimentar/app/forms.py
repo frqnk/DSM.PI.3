@@ -3,8 +3,8 @@ from .models import Doacao
 
 
 class ProdutoForm(forms.Form):
-    nome = forms.CharField(max_length=100)
-    quantidade = forms.IntegerField(min_value=1)
+    nome = forms.CharField(max_length=100, required=False)
+    quantidade = forms.IntegerField(min_value=1, required=False)
 
 
 class DoacaoForm(forms.ModelForm):
