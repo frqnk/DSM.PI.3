@@ -31,7 +31,9 @@ A estrutura do projeto é composta pelo framework Django, e a sua conexão com o
 **Tecnologias Utilizadas**
 
 Django: Framework web para o backend e frontend do projeto.
+
 MongoDB: Banco de dados NoSQL utilizado para armazenar as doações e produtos.
+
 PyMongo: Biblioteca utilizada para conectar o Django ao MongoDB.
 
 
