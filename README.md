@@ -45,18 +45,18 @@ PyMongo: Biblioteca utilizada para conectar o Django ao MongoDB.
 
 *Siga os passos abaixo para configurar e rodar o projeto localmente*
 
-  - Clone o repositório
-  - Crie e ative um ambiente virtual
-  - Instale as dependências
+  1. Clone o repositório
+  2. Crie e ative um ambiente virtual
+  3. Instale as dependências
 
   - Configure o MongoDB
     
 Certifique-se de ter o MongoDB instalado e rodando localmente ou forneça a URL de conexão para um banco de dados MongoDB hospedado.
 
-  - Configure as variáveis de ambiente
-  - Rodar as migrações do Django
-  - Iniciar o servidor de desenvolvimento
-  - Acesse a aplicação: Abra o navegador e vá para http://localhost:8000.
+  1. Configure as variáveis de ambiente
+  2. Rodar as migrações do Django
+  3. Iniciar o servidor de desenvolvimento
+  4. Acesse a aplicação: Abra o navegador e vá para http://localhost:8000.
 
 
 **Contato**
