@@ -1,17 +1,8 @@
-from .models import Doacao
 from .forms import DoacaoForm, ProdutoForm
-from . import forms
 from pymongo import MongoClient
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.views import View
 from django.utils import timezone
 from bson.objectid import ObjectId
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
-import json
-import re
 
 
 # Configurar a conexão com o MongoDB
