@@ -79,7 +79,7 @@ def listar_doacoes(request):
 def excluir_doacao(request, doacao_id):
     if request.method == 'POST':
         collection.delete_one({'_id': ObjectId(doacao_id)})
-    return redirect('listar')  # Corrigido para 'listar'
+        return redirect('listar')  # Corrigido para 'listar'
     return render(request, 'listar.html')
 
 
