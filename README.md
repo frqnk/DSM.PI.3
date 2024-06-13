@@ -1,4 +1,4 @@
-Projeto Conexão Alimentar
+**Projeto Conexão Alimentar**
 
 **Visão Geral**
 
@@ -18,6 +18,10 @@ A estrutura do projeto é composta pelo framework Django, e a sua conexão com o
   - Frank Lima
   - Isabela B. M. Almeida
   - João Augusto Selegatto Pacolla
+
+
+**Logotipo**
+
 
 **Funcionalidades**
 
@@ -44,6 +48,7 @@ PyMongo: Biblioteca utilizada para conectar o Django ao MongoDB.
   - Clone o repositório
   - Crie e ative um ambiente virtual
   - Instale as dependências
+
   - Configure o MongoDB
     
 Certifique-se de ter o MongoDB instalado e rodando localmente ou forneça a URL de conexão para um banco de dados MongoDB hospedado.
