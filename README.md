@@ -14,8 +14,9 @@ A estrutura do projeto é composta pelo framework Django, e a sua conexão com o
 **Integrantes**
 
   - Eryck Ribeiro Lino
-  - Fernando Claudiano
+  - Fernando Claudiano da Silva
   - Frank Lima
+  - Gabriel Barbieri
   - Isabela B. M. Almeida
   - João Augusto Selegatto Pacolla
 
